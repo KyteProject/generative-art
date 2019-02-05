@@ -12,7 +12,7 @@ const sketch = ({ width, height }) => {
 	const colorCount = random.rangeFloor(2, 5);
 	const palette = random.shuffle(random.pick(palettes)).slice(0, colorCount);
 	const background = random.pick(palette);
-	const margin = 200;
+	const margin = 100;
 	const count = random.rangeFloor(4, 8);
 
 	let shapes = [];
@@ -44,7 +44,7 @@ const sketch = ({ width, height }) => {
 		context.fillStyle = background;
 		context.fillRect(0, 0, width, height);
 
-		shapes.forEach(({ lineWidth, path, color }) => {
+		shapes.forEach(({ path, color }) => {
 			context.beginPath();
 			path.forEach(([x, y]) => {
 				context.lineTo(x, y);
@@ -52,8 +52,8 @@ const sketch = ({ width, height }) => {
 			context.closePath();
 
 			// Draw the trapezoid with a specific colour
-			context.lineWidth = 20;
-			context.globalAlpha = 0.85;
+			context.lineWidth = random.rangeFloor(5, 10);
+			context.globalAlpha = 0.8;
 			context.fillStyle = color;
 			context.fill();
 
