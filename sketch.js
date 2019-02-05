@@ -56,7 +56,6 @@ const sketch = () => {
 			context.translate(x, y);
 			context.rotate(rotation);
 			context.fillText('CUNT', 0, 0);
-
 			context.restore();
 		});
 	};

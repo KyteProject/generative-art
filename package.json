@@ -4,5 +4,9 @@
     "canvas-sketch-cli": "^1.2.0",
     "canvas-sketch-util": "^1.6.0",
     "nice-color-palettes": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0"
   }
 }
